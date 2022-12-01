@@ -2,7 +2,7 @@
 title: 200 - Planejamento de Capacidade
 description: Linux - LPIC-2 - Exame 201 - Tópico 200 - Planejamento de Capacidade
 published: true
-date: 2022-12-01T12:17:27.183Z
+date: 2022-12-01T15:53:25.481Z
 tags: 
 editor: markdown
 dateCreated: 2022-11-26T20:43:40.845Z
@@ -95,7 +95,7 @@ Linux 5.14.0-202.el9.x86_64 (localhost.localdomain) 	01/12/2022 	_x86_64_	(3 CPU
 01:02:30        all      0,06      0,00     99,94      0,00      0,00      0,00
 01:22:04        all      0,05      0,05     99,90      0,00      0,00      0,00
 01:25:21        all      0,07      0,00     99,93      0,00      0,00      0,00
-Média:         all      0,11      0,01     92,88      0,00      0,00      7,00
+Média:          all      0,11      0,01     92,88      0,00      0,00      7,00
 
 09:02:39     LINUX RESTART	(3 CPU)
 
