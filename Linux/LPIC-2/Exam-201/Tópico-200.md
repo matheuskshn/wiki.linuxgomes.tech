@@ -2,7 +2,7 @@
 title: 200 - Planejamento de Capacidade
 description: Linux - LPIC-2 - Exame 201 - Tópico 200 - Planejamento de Capacidade
 published: true
-date: 2022-11-27T01:34:00.607Z
+date: 2022-12-01T02:02:18.821Z
 tags: 
 editor: markdown
 dateCreated: 2022-11-26T20:43:40.845Z
@@ -25,7 +25,8 @@ O iostat faz parte do pacote sysstat, o comando exibe estatísticas de uso de CP
 >
 > - %iowait: Porcentagem de tempo em que a CPU teve que aguardar solicitações de E/S de disco.
 >
-> - %steal: 
+> - %steal: Porcentagem de uso de CPU por máquinas virtuais (roubo de CPU).
+
 - Média de uso de discos:
 
 ## uptime
