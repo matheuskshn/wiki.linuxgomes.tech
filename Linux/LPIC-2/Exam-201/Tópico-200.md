@@ -2,7 +2,7 @@
 title: 200 - Planejamento de Capacidade
 description: Linux - LPIC-2 - Exame 201 - Tópico 200 - Planejamento de Capacidade
 published: true
-date: 2022-12-01T11:54:47.661Z
+date: 2022-12-01T12:17:27.183Z
 tags: 
 editor: markdown
 dateCreated: 2022-11-26T20:43:40.845Z
@@ -83,5 +83,20 @@ Usado para monitorar os recursos do sistema, como uso da CPU, memória, consumo 
 `sar`
 Se utilizado sem parâmetros, exibe estatísticas de utilização de CPU a cada 10 minutos.
 ```shell
+[root@localhost matheus]# sar
+Linux 5.14.0-202.el9.x86_64 (localhost.localdomain) 	01/12/2022 	_x86_64_	(3 CPU)
+
+00:00:04        CPU     %user     %nice   %system   %iowait    %steal     %idle
+00:10:04        all      0,21      0,00      1,24      0,03      0,00     98,51
+00:20:04        all      0,19      0,00      1,58      0,03      0,00     98,19
+00:30:04        all      0,40      0,00      3,16      0,03      0,00     96,41
+00:40:26        all      1,52      0,00     21,07      0,04      0,00     77,37
+01:01:51        all      0,07      0,00     99,93      0,00      0,00      0,00
+01:02:30        all      0,06      0,00     99,94      0,00      0,00      0,00
+01:22:04        all      0,05      0,05     99,90      0,00      0,00      0,00
+01:25:21        all      0,07      0,00     99,93      0,00      0,00      0,00
+Média:         all      0,11      0,01     92,88      0,00      0,00      7,00
+
+09:02:39     LINUX RESTART	(3 CPU)
 
 ```
