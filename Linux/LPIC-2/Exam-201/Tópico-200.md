@@ -2,7 +2,7 @@
 title: 200 - Planejamento de Capacidade
 description: Linux - LPIC-2 - Exame 201 - Tópico 200 - Planejamento de Capacidade
 published: true
-date: 2022-12-01T02:10:05.973Z
+date: 2022-12-01T02:12:59.385Z
 tags: 
 editor: markdown
 dateCreated: 2022-11-26T20:43:40.845Z
@@ -11,6 +11,11 @@ dateCreated: 2022-11-26T20:43:40.845Z
 # 200.1 - Medir e solucionar problemas de uso de recursos
 ## iostat
 O iostat faz parte do pacote sysstat, o comando exibe estatísticas de uso de CPU e disco. Server para identificar gargalos de CPU ou disco.
+
+`iostat`
+```shell
+
+```
 
 É possível verificar com o comando iostat:
 - A quantidade de CPU da máquina.
@@ -42,4 +47,9 @@ O iostat faz parte do pacote sysstat, o comando exibe estatísticas de uso de CP
 >
 > - **kB_wrtn**: Kilobytes gravados desde a última reinicialização do S.O.
 
+`iostat -c`
+Traz somente informações de CPU.
+
+`iostat -c`
+Traz somente informações de Disco.
 ## uptime
