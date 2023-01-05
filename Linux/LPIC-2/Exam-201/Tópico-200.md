@@ -2,7 +2,7 @@
 title: 200 - Planejamento de Capacidade
 description: Linux - LPIC-2 - Exame 201 - Tópico 200 - Planejamento de Capacidade
 published: true
-date: 2023-01-05T11:51:54.032Z
+date: 2023-01-05T11:59:43.365Z
 tags: 
 editor: markdown
 dateCreated: 2022-11-26T20:43:40.845Z
@@ -67,6 +67,9 @@ Atualiza as informações CPU de 2 em 2 segundos 5 vezes.
 
 `iostat -d 2 4`
 Atualiza as informações disco de 2 em 2 segundos 4 vezes.
+
+Acesse a documentação do `iostat`:
+<a href="https://man7.org/linux/man-pages/man1/iostat.1.html" target="_blank">`man iostat`</a>
 ## uptime
 O `uptime` mostra a quanto tempo o servidor está ligado. 
 Mostra também o horário atual, quantos usuários estão conectados no momento e uma média de uso de CPU (load average: 1min, 5min, 15min,).
@@ -75,6 +78,9 @@ Mostra também o horário atual, quantos usuários estão conectados no momento 
 [root@localhost ~]# uptime
 23:55:00 up 9 min,  1 user,  load average: 0,04, 0,34, 0,29
 ```
+Acesse a documentação do `uptime`:
+<a href="https://man7.org/linux/man-pages/man1/uptime.1.html" target="_blank">`uptime`</a>
+
 ## sar
 O `sar` faz parte do pacote sysstat, ele mostra relatório de atividades do sistema.
 Usado para monitorar os recursos do sistema, como uso da CPU, memória, consumo de dispositivos de E/S, monitoramento de rede, disco, alocação de processos e threads, desempenho da bateria, dispositivos plug and play, desempenho do processador, sistema de arquivos e muito mais.
@@ -163,8 +169,8 @@ Média:        ens160      0,00      0,00      0,00      0,00      0,00      0,0
 `sar -a`
 Exibe todas estatísticas que podem ser consultadas com o comando `sar`.
 
-Documentação do sar: 
-`man sar`
+Acesse a documentação do `sar`:
+<a href="https://man7.org/linux/man-pages/man1/sar.1.html" target="_blank">`man sar`</a>
 
 ## free
 o `free` Exibe informações sobre o uso da memória RAM.
@@ -184,7 +190,8 @@ Exibe as informações "humanamente" legíveis.
 Mem:           3,5Gi       1,3Gi       1,7Gi        21Mi       756Mi       2,2Gi
 Swap:          2,0Gi          0B       2,0Gi
 ```
-
+Acesse a documentação do `free`:
+<a href="https://man7.org/linux/man-pages/man1/free.1.html" target="_blank">`man free`</a>
 ## vmstat
 O `vmstat` também exibe informações de uso de memória RAM, porém mais detalhado.
 ```shell
@@ -242,5 +249,5 @@ Exibe as estatísticas a cada 5 segundos.
 `vmstat -s`
 Exibe detalhadamente informações de uso da memória.
 
-Documentação do vmstat:
+Acesse a documentação do `vmstat`:
 <a href="https://man7.org/linux/man-pages/man8/vmstat.8.html" target="_blank">`man vmstat`</a>
