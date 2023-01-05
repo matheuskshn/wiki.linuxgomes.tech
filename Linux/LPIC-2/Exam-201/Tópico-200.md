@@ -2,7 +2,7 @@
 title: 200 - Planejamento de Capacidade
 description: Linux - LPIC-2 - Exame 201 - Tópico 200 - Planejamento de Capacidade
 published: true
-date: 2023-01-05T03:34:06.933Z
+date: 2023-01-05T11:22:01.893Z
 tags: 
 editor: markdown
 dateCreated: 2022-11-26T20:43:40.845Z
@@ -168,5 +168,63 @@ Exibe todas estatísticas que podem ser consultadas com o comando `sar`.
 A documentação do sar traz todas as informações do comando, para consultar: `man sar`
 
 ## free
+o `free` Exibe informações sobre o uso da memória RAM.
+```shell
+[root@localhost ~]# free 
+               total        used        free      shared  buff/cache   available
+Mem:         3722260     1386388     1821420       21996      774516     2335872
+Swap:        2097148           0     2097148
+[root@localhost ~]# 
+```
+
+`free -h`
+Exibe as informações "humanamente" legíveis.
+```shell
+[root@localhost ~]# free -h
+               total        used        free      shared  buff/cache   available
+Mem:           3,5Gi       1,3Gi       1,7Gi        21Mi       756Mi       2,2Gi
+Swap:          2,0Gi          0B       2,0Gi
+```
 
 ## vmstat
+O `vmstat` também exibe informações de uso de memória RAM, porém mais detalhado.
+```shell
+[root@localhost ~]# vmstat 
+procs -----------memory---------- ---swap-- -----io---- -system-- ------cpu-----
+ r  b   swpd   free   buff  cache   si   so    bi    bo   in   cs us sy id wa st
+ 0  0      0 1797108   3820 770808    0    0   628    85  186  284  3  4 93  0  0
+```
+> procs: 
+>
+> - **r**: Número de processos executáveis (em execução ou aguardando o tempo de execução).
+> - **b**: O número de processos bloqueados aguardando a conclusão da E/S.
+>
+> memory: 
+>
+> - **swpd**: Quantidade de memória swap usada.
+> - **free**: Quantidade de memória ociosa.
+> - **buff**: Quantidade de memória usada como buffers.
+> - **cache**: Quantidade de memória usada como cache.
+>
+> swap: 
+>
+> - **si**: Quantidade de memória trocada do disco (/s).
+> - **so**: Quantidade de memória trocada para disco (/s).
+>
+> io: 
+>
+> - **bi**: Blocos recebidos de um dispositivo de bloco (blocos/s).
+> - **bo**: Blocos enviados para um dispositivo de bloco (blocos/s).
+>
+> system: 
+>
+> - **in**: O número de interrupções por segundo, incluindo o clock.
+> - **cs**: O número de trocas de contexto por segundo.
+>
+> CPU: 
+>
+> - **us**: Tempo gasto executando código não-kernel. (tempo do usuário, incluindo tempo agradável).
+> - **sy**: Tempo gasto executando o código do kernel. (hora do sistema).
+> - **id**: Tempo gasto ocioso. Antes do Linux 2.5.41, isso inclui o tempo de espera de E/S.
+> - **wa**: Tempo gasto esperando por IO. Antes do Linux 2.5.41, incluído no idle.
+> - **st**: Tempo roubado de uma máquina virtual. Antes do Linux 2.6.11, desconhecido.
