@@ -2,7 +2,7 @@
 title: 200 - Planejamento de Capacidade
 description: Linux - LPIC-2 - Exame 201 - Tópico 200 - Planejamento de Capacidade
 published: true
-date: 2023-01-05T03:27:02.891Z
+date: 2023-01-05T03:34:06.933Z
 tags: 
 editor: markdown
 dateCreated: 2022-11-26T20:43:40.845Z
