@@ -2,7 +2,7 @@
 title: 200 - Planejamento de Capacidade
 description: Linux - LPIC-2 - Exame 201 - Tópico 200 - Planejamento de Capacidade
 published: true
-date: 2023-01-05T11:26:21.209Z
+date: 2023-01-05T11:31:09.858Z
 tags: 
 editor: markdown
 dateCreated: 2022-11-26T20:43:40.845Z
@@ -165,7 +165,8 @@ Média:        ens160      0,00      0,00      0,00      0,00      0,00      0,0
 `sar -a`
 Exibe todas estatísticas que podem ser consultadas com o comando `sar`.
 
-A documentação do sar traz todas as informações do comando, para consultar: `man sar`
+Documentação do sar: 
+`man sar`
 
 ## free
 o `free` Exibe informações sobre o uso da memória RAM.
@@ -229,5 +230,5 @@ procs -----------memory---------- ---swap-- -----io---- -system-- ------cpu-----
 > - **wa**: Tempo gasto esperando por IO.
 > - **st**: Tempo roubado de uma máquina virtual.
 
-Documentação:
-`man vmstat`
+Documentação do vmstat:
+[`man vmstat`](https://man7.org/linux/man-pages/man8/vmstat.8.html)
