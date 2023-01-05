@@ -2,7 +2,7 @@
 title: 200 - Planejamento de Capacidade
 description: Linux - LPIC-2 - Exame 201 - Tópico 200 - Planejamento de Capacidade
 published: true
-date: 2023-01-05T03:24:33.519Z
+date: 2023-01-05T03:27:02.891Z
 tags: 
 editor: markdown
 dateCreated: 2022-11-26T20:43:40.845Z
@@ -166,3 +166,7 @@ Média:        ens160      0,00      0,00      0,00      0,00      0,00      0,0
 Exibe todas estatísticas que podem ser consultadas com o comando `sar`.
 
 A documentação do sar traz todas as informações do comando, para consultar: `man sar`
+
+## free
+
+## vmstat
