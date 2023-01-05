@@ -2,7 +2,7 @@
 title: 200 - Planejamento de Capacidade
 description: Linux - LPIC-2 - Exame 201 - Tópico 200 - Planejamento de Capacidade
 published: true
-date: 2023-01-05T11:22:01.893Z
+date: 2023-01-05T11:26:21.209Z
 tags: 
 editor: markdown
 dateCreated: 2022-11-26T20:43:40.845Z
@@ -225,6 +225,9 @@ procs -----------memory---------- ---swap-- -----io---- -system-- ------cpu-----
 >
 > - **us**: Tempo gasto executando código não-kernel. (tempo do usuário, incluindo tempo agradável).
 > - **sy**: Tempo gasto executando o código do kernel. (hora do sistema).
-> - **id**: Tempo gasto ocioso. Antes do Linux 2.5.41, isso inclui o tempo de espera de E/S.
-> - **wa**: Tempo gasto esperando por IO. Antes do Linux 2.5.41, incluído no idle.
-> - **st**: Tempo roubado de uma máquina virtual. Antes do Linux 2.6.11, desconhecido.
+> - **id**: Tempo gasto ocioso.
+> - **wa**: Tempo gasto esperando por IO.
+> - **st**: Tempo roubado de uma máquina virtual.
+
+Documentação:
+`man vmstat`
