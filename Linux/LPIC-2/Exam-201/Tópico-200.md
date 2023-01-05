@@ -2,7 +2,7 @@
 title: 200 - Planejamento de Capacidade
 description: Linux - LPIC-2 - Exame 201 - Tópico 200 - Planejamento de Capacidade
 published: true
-date: 2023-01-05T11:59:43.365Z
+date: 2023-01-05T12:00:53.609Z
 tags: 
 editor: markdown
 dateCreated: 2022-11-26T20:43:40.845Z
@@ -79,7 +79,7 @@ Mostra também o horário atual, quantos usuários estão conectados no momento 
 23:55:00 up 9 min,  1 user,  load average: 0,04, 0,34, 0,29
 ```
 Acesse a documentação do `uptime`:
-<a href="https://man7.org/linux/man-pages/man1/uptime.1.html" target="_blank">`uptime`</a>
+<a href="https://man7.org/linux/man-pages/man1/uptime.1.html" target="_blank">`man uptime`</a>
 
 ## sar
 O `sar` faz parte do pacote sysstat, ele mostra relatório de atividades do sistema.
