@@ -2,7 +2,7 @@
 title: 200 - Planejamento de Capacidade
 description: Linux - LPIC-2 - Exame 201 - Tópico 200 - Planejamento de Capacidade
 published: true
-date: 2023-01-05T11:42:40.718Z
+date: 2023-01-05T11:51:54.032Z
 tags: 
 editor: markdown
 dateCreated: 2022-11-26T20:43:40.845Z
@@ -243,4 +243,4 @@ Exibe as estatísticas a cada 5 segundos.
 Exibe detalhadamente informações de uso da memória.
 
 Documentação do vmstat:
-[`man vmstat`](https://man7.org/linux/man-pages/man8/vmstat.8.html)
+<a href="https://man7.org/linux/man-pages/man8/vmstat.8.html" target="_blank">`man vmstat`</a>
