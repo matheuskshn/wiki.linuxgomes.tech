@@ -2,7 +2,7 @@
 title: 200 - Planejamento de Capacidade
 description: Linux - LPIC-2 - Exame 201 - Tópico 200 - Planejamento de Capacidade
 published: true
-date: 2022-12-01T15:53:25.481Z
+date: 2023-01-05T02:01:52.850Z
 tags: 
 editor: markdown
 dateCreated: 2022-11-26T20:43:40.845Z
@@ -79,6 +79,8 @@ Mostra também o horário atual, quantos usuários estão conectados no momento 
 ## sar
 O sar faz parte do pacote sysstat, ele mostra relatório de atividades do sistema.
 Usado para monitorar os recursos do sistema, como uso da CPU, memória, consumo de dispositivos de E/S, monitoramento de rede, disco, alocação de processos e threads, desempenho da bateria, dispositivos plug and play, desempenho do processador, sistema de arquivos e muito mais.
+
+Quando instalado e habilitado roda como um serviço do sistema e grava as estatísticas nos logs em /var/log/sa/ em um arquivo binário que pode ser lido pelo comando sar.
 
 `sar`
 Se utilizado sem parâmetros, exibe estatísticas de utilização de CPU a cada 10 minutos.
