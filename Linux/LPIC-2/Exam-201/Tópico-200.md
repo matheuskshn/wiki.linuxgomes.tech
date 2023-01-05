@@ -2,7 +2,7 @@
 title: 200 - Planejamento de Capacidade
 description: Linux - LPIC-2 - Exame 201 - Tópico 200 - Planejamento de Capacidade
 published: true
-date: 2023-01-05T02:01:52.850Z
+date: 2023-01-05T02:51:03.805Z
 tags: 
 editor: markdown
 dateCreated: 2022-11-26T20:43:40.845Z
@@ -59,7 +59,7 @@ nvme0n1          54,06      1603,43       572,15         0,00     828382     295
 `iostat -c`
 Traz somente informações de CPU.
 
-`iostat -c`
+`iostat -d`
 Traz somente informações de Disco.
 
 `iostat -c 2 5`
@@ -85,20 +85,51 @@ Quando instalado e habilitado roda como um serviço do sistema e grava as estat�
 `sar`
 Se utilizado sem parâmetros, exibe estatísticas de utilização de CPU a cada 10 minutos.
 ```shell
-[root@localhost matheus]# sar
-Linux 5.14.0-202.el9.x86_64 (localhost.localdomain) 	01/12/2022 	_x86_64_	(3 CPU)
+[root@localhost ~]# sar
+Linux 5.14.0-202.el9.x86_64 (localhost) 	04/01/2023 	_x86_64_	(3 CPU)
 
-00:00:04        CPU     %user     %nice   %system   %iowait    %steal     %idle
-00:10:04        all      0,21      0,00      1,24      0,03      0,00     98,51
-00:20:04        all      0,19      0,00      1,58      0,03      0,00     98,19
-00:30:04        all      0,40      0,00      3,16      0,03      0,00     96,41
-00:40:26        all      1,52      0,00     21,07      0,04      0,00     77,37
-01:01:51        all      0,07      0,00     99,93      0,00      0,00      0,00
-01:02:30        all      0,06      0,00     99,94      0,00      0,00      0,00
-01:22:04        all      0,05      0,05     99,90      0,00      0,00      0,00
-01:25:21        all      0,07      0,00     99,93      0,00      0,00      0,00
-Média:          all      0,11      0,01     92,88      0,00      0,00      7,00
+23:27:45     LINUX RESTART	(3 CPU)
 
-09:02:39     LINUX RESTART	(3 CPU)
+23:30:01        CPU     %user     %nice   %system   %iowait    %steal     %idle
+23:30:17        all      0,21      0,00      1,85      0,04      0,00     97,90
+Média:         all      0,21      0,00      1,85      0,04      0,00     97,90
 
+
+```
+`sar -d `
+Exibe estatísticas de uso de discos. 
+```shell
+[root@localhost ~]# sar -d
+Linux 5.14.0-202.el9.x86_64 (localhost) 	04/01/2023 	_x86_64_	(3 CPU)
+
+23:27:45     LINUX RESTART	(3 CPU)
+
+23:30:01          DEV       tps     rkB/s     wkB/s     dkB/s   areq-sz    aqu-sz     await     %util
+23:30:17      nvme0n1      0,25      0,00      0,99      0,00      4,00      0,00      1,25      0,04
+23:30:17          sr0      0,00      0,00      0,00      0,00      0,00      0,00      0,00      0,00
+23:30:17         dm-0      0,25      0,00      0,99      0,00      4,00      0,00      1,75      0,04
+23:30:17         dm-1      0,00      0,00      0,00      0,00      0,00      0,00      0,00      0,00
+Média:       nvme0n1      0,25      0,00      0,99      0,00      4,00      0,00      1,25      0,04
+Média:           sr0      0,00      0,00      0,00      0,00      0,00      0,00      0,00      0,00
+Média:          dm-0      0,25      0,00      0,99      0,00      4,00      0,00      1,75      0,04
+Média:          dm-1      0,00      0,00      0,00      0,00      0,00      0,00      0,00      0,00
+
+```
+`sar -r`
+Exibe estatísticas de uso de memória RAM.
+```shell
+[root@localhost ~]# sar -r
+Linux 5.14.0-202.el9.x86_64 (localhost) 	04/01/2023 	_x86_64_	(3 CPU)
+
+23:27:45     LINUX RESTART	(3 CPU)
+
+23:30:01    kbmemfree   kbavail kbmemused  %memused kbbuffers  kbcached  kbcommit   %commit  kbactive   kbinact   kbdirty
+23:30:17      1955184   2439056    941180     25,28      3820    680936   3251160     55,87    340524   1042064         0
+Média:       1955184   2439056    941180     25,28      3820    680936   3251160     55,87    340524   1042064         0
+
+23:42:18     LINUX RESTART	(2 CPU)
+
+23:50:01    kbmemfree   kbavail kbmemused  %memused kbbuffers  kbcached  kbcommit   %commit  kbactive   kbinact   kbdirty
+23:50:01      2382992   3385380   1003496     21,19      2780   1204244   3278232     47,97    355744   1628224      4176
+Média:       2382992   3385380   1003496     21,19      2780   1204244   3278232     47,97    355744   1628224      4176
 ```
