@@ -2,7 +2,7 @@
 title: 200 - Planejamento de Capacidade
 description: Linux - LPIC-2 - Exame 201 - Tópico 200 - Planejamento de Capacidade
 published: true
-date: 2023-01-05T11:31:09.858Z
+date: 2023-01-05T11:42:40.718Z
 tags: 
 editor: markdown
 dateCreated: 2022-11-26T20:43:40.845Z
@@ -68,21 +68,19 @@ Atualiza as informações CPU de 2 em 2 segundos 5 vezes.
 `iostat -d 2 4`
 Atualiza as informações disco de 2 em 2 segundos 4 vezes.
 ## uptime
-O uptime mostra a quanto tempo o servidor está ligado. 
+O `uptime` mostra a quanto tempo o servidor está ligado. 
 Mostra também o horário atual, quantos usuários estão conectados no momento e uma média de uso de CPU (load average: 1min, 5min, 15min,).
 
-`uptime`
 ```shell
 [root@localhost ~]# uptime
 23:55:00 up 9 min,  1 user,  load average: 0,04, 0,34, 0,29
 ```
 ## sar
-O sar faz parte do pacote sysstat, ele mostra relatório de atividades do sistema.
+O `sar` faz parte do pacote sysstat, ele mostra relatório de atividades do sistema.
 Usado para monitorar os recursos do sistema, como uso da CPU, memória, consumo de dispositivos de E/S, monitoramento de rede, disco, alocação de processos e threads, desempenho da bateria, dispositivos plug and play, desempenho do processador, sistema de arquivos e muito mais.
 
 Quando instalado e habilitado roda como um serviço do sistema e grava as estatísticas nos logs em /var/log/sa/ em um arquivo binário que pode ser lido pelo comando sar.
 
-`sar`
 Se utilizado sem parâmetros, exibe estatísticas de utilização de CPU a cada 10 minutos.
 ```shell
 [root@localhost ~]# sar
@@ -206,6 +204,14 @@ procs -----------memory---------- ---swap-- -----io---- -system-- ------cpu-----
 > - **free**: Quantidade de memória ociosa.
 > - **buff**: Quantidade de memória usada como buffers.
 > - **cache**: Quantidade de memória usada como cache.
+> - **inact**: a quantidade de memória inativa. (exibido c/ opção -a: `vmstat -a`)
+> - **activ**: a quantidade de memória ativa. (exibido c/ opção -a: `vmstat -a`)
+>```shell
+>[root@localhost ~]# vmstat -a
+>procs -----------memory---------- ---swap-- -----io---- -system-- ------cpu---->-
+> r  b   swpd   free  inact active   si   so    bi    bo   in   cs us sy id wa >st
+> 0  0      0 1717420 1233036 319420    0    0   175    23  238  127  1  4 95  0  > 0
+> ```
 >
 > swap: 
 >
@@ -229,6 +235,12 @@ procs -----------memory---------- ---swap-- -----io---- -system-- ------cpu-----
 > - **id**: Tempo gasto ocioso.
 > - **wa**: Tempo gasto esperando por IO.
 > - **st**: Tempo roubado de uma máquina virtual.
+
+`vmstat -5`
+Exibe as estatísticas a cada 5 segundos.
+
+`vmstat -s`
+Exibe detalhadamente informações de uso da memória.
 
 Documentação do vmstat:
 [`man vmstat`](https://man7.org/linux/man-pages/man8/vmstat.8.html)
