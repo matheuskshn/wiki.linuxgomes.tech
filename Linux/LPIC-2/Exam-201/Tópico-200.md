@@ -2,7 +2,7 @@
 title: 200 - Planejamento de Capacidade
 description: Linux - LPIC-2 - Exame 201 - Tópico 200 - Planejamento de Capacidade
 published: true
-date: 2023-01-05T02:51:03.805Z
+date: 2023-01-05T03:21:11.751Z
 tags: 
 editor: markdown
 dateCreated: 2022-11-26T20:43:40.845Z
@@ -133,3 +133,34 @@ Média:       1955184   2439056    941180     25,28      3820    680936   325116
 23:50:01      2382992   3385380   1003496     21,19      2780   1204244   3278232     47,97    355744   1628224      4176
 Média:       2382992   3385380   1003496     21,19      2780   1204244   3278232     47,97    355744   1628224      4176
 ```
+`sar -w`
+Exibe o percentual de criação de processos por segundo (**proc/s**) e de mudança de estados (**cswch/s**) quando a CPU alterna entre um processo e outro.
+```shell
+root@localhost ~]# sar -w
+Linux 5.14.0-202.el9.x86_64 (localhost) 	05/01/2023 	_x86_64_	(4 CPU)
+
+00:07:15     LINUX RESTART	(4 CPU)
+
+00:10:00       proc/s   cswch/s
+00:10:01         1,82   1120,91
+Média:          1,82   1120,91
+
+```
+`sar -n DEV`
+Exibe estatísticas dos dispositivos de rede.
+```shell
+[root@localhost ~]# sar -n DEV
+Linux 5.14.0-202.el9.x86_64 (localhost) 	05/01/2023 	_x86_64_	(4 CPU)
+
+00:07:15     LINUX RESTART	(4 CPU)
+
+00:10:00        IFACE   rxpck/s   txpck/s    rxkB/s    txkB/s   rxcmp/s   txcmp/s  rxmcst/s   %ifutil
+00:10:01           lo      0,00      0,00      0,00      0,00      0,00      0,00      0,00      0,00
+00:10:01       ens160      0,00      0,00      0,00      0,00      0,00      0,00      0,00      0,00
+Média:            lo      0,00      0,00      0,00      0,00      0,00      0,00      0,00      0,00
+Média:        ens160      0,00      0,00      0,00      0,00      0,00      0,00      0,00      0,00
+
+```
+
+`sar -a`
+Exibe todas estatísticas que podem ser consultadas com o comando `sar`.
