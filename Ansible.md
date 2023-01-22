@@ -2,7 +2,7 @@
 title: Instalando o Ansible
 description: Instalando o Ansible
 published: true
-date: 2023-01-21T23:48:04.793Z
+date: 2023-01-22T00:04:09.251Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-21T23:48:04.793Z
