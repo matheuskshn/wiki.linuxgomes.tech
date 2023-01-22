@@ -2,7 +2,7 @@
 title: Instalando o Ansible
 description: Instalando o Ansible
 published: true
-date: 2023-01-22T03:50:57.161Z
+date: 2023-01-22T03:53:46.636Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-21T23:48:04.793Z
@@ -13,7 +13,7 @@ Ansible é uma ferramenta de automação de código aberto escrito em Python. El
 
 Os principais pontos fortes do Ansible são a simplicidade e a facilidade de uso. Ele também tem um forte foco em segurança e confiabilidade, apresentando peças móveis mínimas. Ele usa o OpenSSH para transporte (com outros transportes e modos pull como alternativas) e usa uma linguagem legível por humanos projetada para começar rapidamente sem muito treinamento.
 
-## Passo 1 - Atualizar os pacotes instalados no sistema
+## Passo 1 - Atualizar o repositório de pacotes do sistema.
 ```shell
 apt update -y
 ```
@@ -29,26 +29,15 @@ Building dependency tree... Done
 Reading state information... Done
 0 package can be upgraded.
 ```
-```shell
-apt dist-upgrade -y
-```
-```shell
-root@ansible-ubuntu22:~# apt dist-upgrade -y
-Reading package lists... Done
-Building dependency tree... Done
-Reading state information... Done
-Calculating upgrade... Done
-0 upgraded, 0 newly installed and 0 to remove.
-```
 ## Passo 2 - Instalar o python3.10
 ```shell
 add-apt-repository ppa:deadsnakes/ppa
-apt install python3.10
+apt install python3.11
 ```
-Definindo o **python3.10** como padrão do sistema:
+Definindo o **python3.11** como padrão do sistema:
 ```shell
-update-alternatives --install /usr/bin/python python /usr/bin/python3.10 1
-update-alternatives --set python /usr/bin/python3.10
+update-alternatives --install /usr/bin/python python /usr/bin/python3.11 1
+update-alternatives --set python /usr/bin/python3.11
 ```
 Verificando a versão do python:
 ```shell
